@@ -49,26 +49,22 @@ class SortList:
         return slow
     
     def merge(self, list1, list2):
-        tail = dummy = ListNode()
-        while list1 and list2:
-            if list1.val < list2.val:
-                tail.next = list1
-                list1 = list1.next
-            else:
-                tail.next = list2
-                list2 = list2.next
-            tail = tail.next
-        if list1:
-            tail.next = list1
-        if list2:
-            tail.next = list2
-        return dummy.next
+        result = None
+        if list1 == None:
+            return list2
+        if list2 == None:
+            return list1
+        
+        if list1.val <= list2.val:
+            result = list1
+            result.next = self.merge(list1.next, list2)
+        else:
+            result = list2
+            result.next = self.merge(list1, list2.next)
+        return result
+        
 
-    def to_linked_list(iterable):
-        head = None
-        for val in reversed(iterable):
-            head = ListNode(val, head)
-        return head
+  
 
  
 
