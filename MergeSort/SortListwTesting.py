@@ -77,13 +77,12 @@ class LinkedList:
         return self.merge(left, right)
 
     def getMid(self, head):
-        #slow/fast pointers
+        #slow/fast pointers        
+        slow = head
+        fast = head
 
         if (head == None):
             return head
-
-        slow = head
-        fast = head
         
         while fast.next and fast.next.next:
             slow = slow.next
@@ -92,14 +91,15 @@ class LinkedList:
 
 def printList(head):
     if head is None:
-        print(' ')
         return
     curr = head
     while curr:
         print(curr.val, end = " ")
         curr = curr.next
-    print(' ')
+    print(" ")
 
+
+ 
 
 if __name__ == '__main__':
     l = LinkedList()
@@ -112,4 +112,17 @@ if __name__ == '__main__':
     l.head = l.sortList(l.head)
     print("Sorted Linked List: " )
     printList(l.head)
+
+    l2 = LinkedList()
+
+    l2.append(500)
+    l2.append(45)
+    l2.append(48502)
+    l2.append(0)
+    l2.append(324)
+
+    l2.head = l2.sortList(l2.head)
+    print("Sorted Linked List 2: ")
+    printList(l2.head)
+
 
