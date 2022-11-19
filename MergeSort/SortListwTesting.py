@@ -19,9 +19,9 @@
 # Total Time Complexity: O(nlogn)
 
 
-class Node:
-    def __init__(self, data):
-        self.data = data
+class ListNode:
+    def __init__(self, val):
+        self.val = val
         self.next = None
 
 class LinkedList:
@@ -31,7 +31,7 @@ class LinkedList:
     #push values into linked list
     def append(self, value):
         #init new node
-        new = Node(value)
+        new = ListNode(value)
 
         if self.head is None:
             self.head = new
@@ -50,7 +50,7 @@ class LinkedList:
         if l2 == None:
             return l1
 
-        if l1.data <= l2.data:
+        if l1.val <= l2.val:
             result = l1 
             result.next = self.merge(l1.next, l2)
         else:
@@ -96,7 +96,7 @@ def printList(head):
         return
     curr = head
     while curr:
-        print(curr.data, end = " ")
+        print(curr.val, end = " ")
         curr = curr.next
     print(' ')
 
