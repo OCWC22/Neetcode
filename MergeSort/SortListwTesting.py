@@ -58,6 +58,8 @@ class LinkedList:
             result.next = self.merge(l1, l2.next)
         return result
 
+        
+
     def sortList(self, head):
         
         if not head or not head.next:
