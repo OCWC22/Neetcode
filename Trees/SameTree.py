@@ -3,6 +3,8 @@
 
 #https://www.youtube.com/watch?v=vRbbcKXCxOw
 
+#DFS - Recursion preorder
+
 class TreeNode:
     def __init__(self, val = 0, left = None, right = None):
         self.val =val
