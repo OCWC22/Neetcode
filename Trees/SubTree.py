@@ -1,3 +1,8 @@
+#Leetcode 527
+#https://leetcode.com/problems/subtree-of-another-tree/description/
+
+#https://www.youtube.com/watch?v=E36O5SWp-LE
+
 class TreeNode:
     def __init__(self, val = 0, left = None, right = None):
         self.val =val
