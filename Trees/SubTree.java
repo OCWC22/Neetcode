@@ -13,7 +13,7 @@ class Solution {
        if (root == null || subRoot == null)
            return false;
        if (sameTree(root, subRoot))
-           return true;
+           return true; 
        return (isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot));
        
    }
