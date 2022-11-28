@@ -13,4 +13,4 @@ d.popleft()
 print(d)
 
 d.insert(1,5959)
-print(d)
+print(d) 
