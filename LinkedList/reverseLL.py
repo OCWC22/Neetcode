@@ -9,7 +9,11 @@
 class ListNode:
     def __init__(self, val):
         self.val = val
-        self.next = None
+
+
+#Iterative
+#Time: O(n) n = list length
+#Space: O(1)
 
 class Solution:
     def reverseList(self, head):
@@ -17,9 +21,10 @@ class Solution:
         curr = head
 
         while curr:
-            next = curr.next
+            temp = curr.next
             curr.next = prev
             prev = curr
-            curr = next
+            curr = temp
         return prev
-        
+    
+#Recursive
